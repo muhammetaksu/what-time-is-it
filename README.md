@@ -4,4 +4,4 @@
 
 > _Hazırlamış olduğum ödeve aşağıdaki linkten ulaşabilirsiniz._
 
--   Website: [https://muhammetaksu.github.io/what-time-is-it?/](https://muhammetaksu.github.io/what-time-is-it?/)
+-   Website: [https://muhammetaksu.github.io/what-time-is-it/](https://muhammetaksu.github.io/what-time-is-it/)
