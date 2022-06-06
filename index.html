@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Saat Kaç?</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap.min.css"
+            integrity="sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <style>
+            * {
+                color: rgb(238, 139, 27);
+            }
+            body {
+                margin: 0;
+                background-color: rgb(50, 56, 62);
+                margin-top: 10vh;
+                padding: 0 50px;
+            }
+
+            hr {
+                color: rgb(238, 139, 27);
+                box-shadow: 0 0 5px rgb(238, 139, 27);
+                margin: 30px 0;
+            }
+
+            #title {
+                text-shadow: 0 0 10px rgb(20, 20, 20);
+            }
+            #user {
+                letter-spacing: 2px;
+                word-spacing: 8px;
+            }
+
+            div,
+            p {
+                text-align: center;
+                margin: 10px;
+            }
+
+            #time > * {
+                font-size: x-large;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="title"></div>
+            <div id="user"></div>
+            <hr />
+            <div id="time">
+                <div id="today-time"></div>
+                <div id="today-date"></div>
+                <div id="day-of-week"></div>
+                <div id="day-of-year"></div>
+                <div id="week-of-year"></div>
+            </div>
+            <hr />
+            <p id="para"></p>
+        </div>
+    </body>
+    <script type="text/javascript" src="script.js"></script>
+</html>
