@@ -41,8 +41,9 @@ $.get(
         document.querySelector(
             "#week-of-year"
         ).innerHTML = `Bu hafta yılın <b>${weekOfYear}</b>. haftası.`;
-        document.querySelector(
-            "#para"
-        ).innerHTML = `<b>Kodluyoruz Frontend Web Development Patikası</b>'nın Javascript bölümü 1. ödevindesiniz.`;
     }
 );
+
+document.querySelector(
+    "#para"
+).innerHTML = `<b>Kodluyoruz Frontend Web Development Patikası</b>'nın Javascript bölümü 1. ödevindesiniz.`;
