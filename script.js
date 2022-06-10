@@ -21,14 +21,14 @@ if (firstName.length > 0) {
     user.innerHTML = `Merhaba, Guest! Hoş geldin!`;
 }
 
-$.get(
-    "http://worldtimeapi.org/api/timezone/Europe/Istanbul",
-    function (data, status) {
-        const rightNow = data.datetime.slice(11, 19);
-        const date = data.datetime.slice(0, 10);
-        const dayOfWeek = data.day_of_week;
-        const dayOfYear = data.day_of_year;
-        const weekOfYear = data.week_number;
+fetch("http://worldtimeapi.org/api/timezone/Europe/Istanbul")
+    .then((response) => response.json())
+    .then((result) => {
+        const rightNow = result.datetime.slice(11, 19);
+        const date = result.datetime.slice(0, 10);
+        const dayOfWeek = result.day_of_week;
+        const dayOfYear = result.day_of_year;
+        const weekOfYear = result.week_number;
 
         todayTime.innerHTML = `Saat: <b>${rightNow}</b>`;
         todayDate.innerHTML = `Tarih: <b>${date}</b>`;
@@ -41,8 +41,7 @@ $.get(
         document.querySelector(
             "#week-of-year"
         ).innerHTML = `Bu hafta yılın <b>${weekOfYear}</b>. haftası.`;
-    }
-);
+    });
 
 document.querySelector(
     "#para"
