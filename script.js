@@ -21,27 +21,68 @@ if (firstName.length > 0) {
     user.innerHTML = `Merhaba, Guest! Hoş geldin!`;
 }
 
-fetch("http://worldtimeapi.org/api/timezone/Europe/Istanbul")
-    .then((response) => response.json())
-    .then((result) => {
-        const rightNow = result.datetime.slice(11, 19);
-        const date = result.datetime.slice(0, 10);
-        const dayOfWeek = result.day_of_week;
-        const dayOfYear = result.day_of_year;
-        const weekOfYear = result.week_number;
+// fetch("http://worldtimeapi.org/api/timezone/Europe/Istanbul")
+//     .then((response) => response.json())
+//     .then((result) => {
+//         const rightNow = result.datetime.slice(11, 19);
+//         const date = result.datetime.slice(0, 10);
+//         const dayOfWeek = result.day_of_week;
+//         const dayOfYear = result.day_of_year;
+//         const weekOfYear = result.week_number;
 
-        todayTime.innerHTML = `Saat: <b>${rightNow}</b>`;
-        todayDate.innerHTML = `Tarih: <b>${date}</b>`;
-        document.querySelector(
-            "#day-of-week"
-        ).innerHTML = `Bugün haftanın <b>${dayOfWeek}</b>. günü.`;
-        document.querySelector(
-            "#day-of-year"
-        ).innerHTML = `Bugün yılın <b>${dayOfYear}</b>. günü.`;
-        document.querySelector(
-            "#week-of-year"
-        ).innerHTML = `Bu hafta yılın <b>${weekOfYear}</b>. haftası.`;
-    });
+//         todayTime.innerHTML = `Saat: <b>${rightNow}</b>`;
+//         todayDate.innerHTML = `Tarih: <b>${date}</b>`;
+//         document.querySelector(
+//             "#day-of-week"
+//         ).innerHTML = `Bugün haftanın <b>${dayOfWeek}</b>. günü.`;
+//         document.querySelector(
+//             "#day-of-year"
+//         ).innerHTML = `Bugün yılın <b>${dayOfYear}</b>. günü.`;
+//         document.querySelector(
+//             "#week-of-year"
+//         ).innerHTML = `Bu hafta yılın <b>${weekOfYear}</b>. haftası.`;
+//     });
+
+// const months = [
+//     "January",
+//     "February",
+//     "March",
+//     "April",
+//     "May",
+//     "June",
+//     "July",
+//     "August",
+//     "September",
+//     "October",
+//     "November",
+//     "December",
+// ];
+
+const d = new Date();
+// const day = d.getDay();
+// const month = d.getMonth();
+// const year = d.getFullYear();
+// const sec = d.getSeconds();
+// const min = d.getMinutes();
+// const hour = d.getHours();
+const fullDate = d.toLocaleDateString();
+const fullTime = d.toLocaleTimeString();
+
+// console.log(asdsa);
+
+{
+    todayTime.innerHTML = `Saat: <b>${fullTime}</b>`;
+    todayDate.innerHTML = `Tarih: <b>${fullDate}</b>`;
+    //     document.querySelector(
+    //         "#day-of-week"
+    //     ).innerHTML = `Bugün haftanın <b>${monthAsString}</b>. günü.`;
+    //     document.querySelector(
+    //         "#day-of-year"
+    //     ).innerHTML = `Bugün yılın <b>${dayOfYear}</b>. günü.`;
+    //     document.querySelector(
+    //         "#week-of-year"
+    //     ).innerHTML = `Bu hafta yılın <b>${weekOfYear}</b>. haftası.`;
+}
 
 document.querySelector(
     "#para"
